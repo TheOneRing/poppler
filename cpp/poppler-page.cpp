@@ -293,7 +293,9 @@ ustring page::text(const rectf &r, text_layout_enum layout_mode) const
  */
 text_box_data::~text_box_data() = default;
 
-text_box::~text_box() = default;
+text_box::~text_box() {
+    delete m_data;
+}
 
 text_box::text_box(text_box_data *data) : m_data{data}
 {

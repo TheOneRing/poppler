@@ -60,7 +60,7 @@ public:
 private:
     text_box(text_box_data *data);
 
-    std::unique_ptr<text_box_data> m_data;
+    text_box_data *m_data;
 };
 
 class document;
